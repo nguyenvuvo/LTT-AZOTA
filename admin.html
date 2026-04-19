@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng Điều Khiển Admin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h1>Portal Bài Tập - Admin</h1>
+        <div class="nav-links">
+            <button onclick="logout()">Đăng Xuất</button>
+        </div>
+    </nav>
+    <main class="container">
+        <h2>Quản Lý Hệ Thống</h2>
+        <div class="card">
+            <h3>Duyệt Tài Khoản Học Sinh</h3>
+            <ul id="pendingUsersList"></ul>
+        </div>
+        <div class="card">
+            <h3>Thêm Tài Khoản Giáo Viên</h3>
+            <form id="addTeacherForm">
+                <label for="teacherUsername">Tên đăng nhập:</label>
+                <input type="text" id="teacherUsername" required>
+                <label for="teacherPassword">Mật khẩu:</label>
+                <input type="password" id="teacherPassword" required>
+                <label for="teacherName">Tên đầy đủ:</label>
+                <input type="text" id="teacherName" required>
+                <button type="submit" class="btn-primary">Thêm Giáo Viên</button>
+            </form>
+        </div>
+        <div class="card">
+            <h3>Quản Lý Bài Tập</h3>
+            <ul id="adminAssignmentsList"></ul>
+        </div>
+    </main>
+    <script src="app.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng Điều Khiển Học Sinh</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h1>Portal Bài Tập - Học Sinh</h1>
+        <div class="nav-links">
+            <a href="http://localhost:8000/practice.html">Luyện Tập</a>
+            <a href="http://localhost:8000/leaderboard.html">Bảng Xếp Hạng</a>
+            <button onclick="logout()">Đăng Xuất</button>
+        </div>
+    </nav>
+    <main class="container">
+        <h2>📋 Cổng Học Tập Học Sinh</h2>
+        <div class="card">
+            <h3>📝 Bài Tập Khả Dụng</h3>
+            <div id="assignmentCards"></div>
+        </div>
+        <div class="card">
+            <h3>🎯 Kết Quả Của Bạn</h3>
+            <ul id="resultsList"></ul>
+        </div>
+    </main>
+    <script src="app.js"></script>
+    <script src="student.js"></script>
+</body>
+</html>

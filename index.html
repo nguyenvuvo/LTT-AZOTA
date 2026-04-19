@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LTT AZOTA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>WELCOME TO LTT AZOTA</h1>
+        <div class="login-form">
+            <h2>Đăng Nhập</h2>
+            <form id="loginForm">
+                <label for="role">Vai trò:</label>
+                <select id="role" required>
+                    <option value="teacher">Giáo viên</option>
+                    <option value="student">Học sinh</option>
+                    <option value="admin">Admin</option>
+                </select>
+                <label for="username">Tên đăng nhập:</label>
+                <input type="text" id="username" required>
+                <label for="password">Mật khẩu:</label>
+                <input type="password" id="password" required>
+                <button type="submit">Đăng Nhập</button>
+            </form>
+            <p id="message"></p>
+            <p><a href="http://localhost:8000/register.html">Đăng ký tài khoản học sinh mới</a></p>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

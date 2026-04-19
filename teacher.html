@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng Điều Khiển Giáo Viên</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h1>Portal Bài Tập - Giáo Viên</h1>
+        <div class="nav-links">
+            <button onclick="logout()">Đăng Xuất</button>
+        </div>
+    </nav>
+    <main class="container">
+        <h2>👨‍🏫 Trung Tâm Quản Lý Giáo Viên</h2>
+        <div class="card">
+            <h3>✏️ Tạo Bài Tập Mới</h3>
+            <form id="assignmentForm">
+                <label for="title">Tiêu đề:</label>
+                <input type="text" id="title" required>
+                <label for="topic">Chủ đề:</label>
+                <input type="text" id="topic" required>
+                <label for="timeLimit">Thời gian làm bài (phút):</label>
+                <input type="number" id="timeLimit" min="0" value="0">
+                <label for="file">Upload Đề Bài (PDF hoặc Ảnh):</label>
+                <input type="file" id="file" accept=".pdf,.jpg,.jpeg,.png">
+                <div id="filePreview"></div>
+                <div id="questions">
+                    <div class="question">
+                        <label>Câu hỏi 1:</label>
+                        <input type="text" class="q-text" required>
+                        <label>Đáp án:</label>
+                        <input type="text" class="q-answer" required>
+                        <button type="button" onclick="removeQuestion(this)">Xóa</button>
+                    </div>
+                </div>
+                <button type="button" onclick="addQuestion()">Thêm Câu Hỏi</button>
+                <button type="submit">Xuất Bản Bài Tập</button>
+            </form>
+        </div>
+        <div class="card">
+            <h3>📊 Quản Lý Bài Tập</h3>
+            <ul id="assignmentList"></ul>
+        </div>
+    </main>
+    <script src="app.js"></script>
+    <script src="teacher.js"></script>
+</body>
+</html>
