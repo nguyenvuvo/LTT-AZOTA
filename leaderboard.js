@@ -8,7 +8,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Kiểm tra xác thực - phải đăng nhập mới xem được
     if (!currentUser) {
-        window.location.href = 'http://localhost:8000/index.html';
+        window.location.href = 'index.html';
         return;
     }
     // Hiển thị bảng xếp hạng

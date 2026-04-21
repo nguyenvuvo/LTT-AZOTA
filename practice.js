@@ -3,7 +3,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Kiểm tra xác thực - chỉ học sinh mới vào được
     if (!currentUser || currentUser.role !== 'student') {
-        window.location.href = 'http://localhost:8000/index.html';
+        window.location.href = 'index.html';
         return;
     }
 
@@ -43,5 +43,5 @@ function renderPracticeByTopic() {
 /* Bắt đầu luyện tập */
 function startPractice(id) {
     // Chuyển đến quiz với tham số: ?id=123&practice=true
-    window.location.href = `http://localhost:8000/quiz.html?id=${id}&practice=true`;
+    window.location.href = `quiz.html?id=${id}&practice=true`;
 }

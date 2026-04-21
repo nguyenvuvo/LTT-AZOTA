@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Kiểm tra xác thực - chỉ học sinh mới xem được kết quả của mình
     if (!currentUser || currentUser.role !== 'student') {
-        window.location.href = 'http://localhost:8000/index.html';
+        window.location.href = 'index.html';
         return;
     }
 
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const submission = submissions.find(s => s.id === submissionId && s.studentId === currentUser.id);
     if (!submission) {
         alert('Result not found');
-        window.location.href = 'http://localhost:8000/student.html';
+        window.location.href = 'student.html';
         return;
     }
 

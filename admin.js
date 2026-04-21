@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Kiểm tra xác thực - chỉ admin mới vào được
     if (!currentUser || currentUser.role !== 'admin') {
-        window.location.href = 'http://localhost:8000/index.html';
+        window.location.href = 'index.html';
         return;
     }
 

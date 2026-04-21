@@ -42,11 +42,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 // Chuyển hướng dựa trên vai trò
                 if (role === 'teacher') {
-                    window.location.href = 'http://localhost:8000/teacher.html';
+                    window.location.href = 'teacher.html';
                 } else if (role === 'student') {
-                    window.location.href = 'http://localhost:8000/student.html';
+                    window.location.href = 'student.html';
                 } else if (role === 'admin') {
-                    window.location.href = 'http://localhost:8000/admin.html';
+                    window.location.href = 'admin.html';
                 }
             } else {
                 // ✗ Đăng nhập thất bại
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
 /* Hàm đăng xuất */
 function logout() {
     localStorage.removeItem('currentUser');  // Xóa user hiện tại
-    window.location.href = 'http://localhost:8000/index.html';     // Chuyển về trang đăng nhập
+    window.location.href = 'index.html';     // Chuyển về trang đăng nhập
 }
 
 /* Hàm tiện ích */

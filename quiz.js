@@ -4,7 +4,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Kiểm tra xác thực - chỉ học sinh mới vào được
     if (!currentUser || currentUser.role !== 'student') {
-        window.location.href = 'http://localhost:8000/index.html';
+        window.location.href = 'index.html';
         return;
     }
 
@@ -107,6 +107,6 @@ document.addEventListener('DOMContentLoaded', () => {
         saveData();
 
         // Bước 7: Chuyển sang trang kết quả
-        window.location.href = `http://localhost:8000/results.html?id=${submission.id}`;
+        window.location.href = `results.html?id=${submission.id}`;
     });
 });
